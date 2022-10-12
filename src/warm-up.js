@@ -27,7 +27,7 @@ console.log(inStock);
 
 // Initialize a new variable "isFavorite", and assign it to a boolean value indicating
 // if the food you chose is your favorite food or not
-
+var isFavorite = false;
 
 
 // Create a new variable named "shouldOrderMore", and use a comparison operator to
