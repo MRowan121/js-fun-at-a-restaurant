@@ -1,16 +1,13 @@
 function nameMenuItem(food) {
-  // console.log(`Delicious ${food}`);
   return `Delicious ${food}`;
 }
 
 function createMenuItem(name, price, type) {
-  // console.log({name: name, price: price, type: type});
   return {name: name, price: price, type: type};
 };
 
 
 function addIngredients(food, ingredients) {
-  // ingredients.push(food);
   if (ingredients.includes(food)) {
     return 
     } else {
