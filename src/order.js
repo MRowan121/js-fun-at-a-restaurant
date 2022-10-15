@@ -9,17 +9,25 @@ function takeOrder(order, deliveryOrders) {
 function refundOrder(order, deliveryOrders) {
   for (var i = 0; i < deliveryOrders.length; i++) {
     if (deliveryOrders[i].orderNumber === order) {
-      return deliveryOrders.splice(i, 1);
+      return deliveryOrders.splice([i], 1);
     };
   };
-  
-  // if (deliveryOrders.includes(orderNumber)) {
-  //   return deliveryOrders.splice(deliveryOrders);
 };
+
+function listItems(orders) {
+  var food = [];
+
+  for (var i = 0; i < orders.length; i++) {
+    food.push(orders[i].item)
+  };
+  var allFood = food.join(", ");
+  return allFood;
+};
+
 
 module.exports = {
   takeOrder,
   refundOrder,
-  // listItems,
+  listItems,
   // searchOrder
 }
