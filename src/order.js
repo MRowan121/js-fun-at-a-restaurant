@@ -24,10 +24,18 @@ function listItems(orders) {
   return allFood;
 };
 
+function searchOrder(orders, itemName) {
+  for (var i = 0; i < orders.length; i++) {
+    if (orders[i].item === itemName) {
+      return true;
+    }; 
+  };
+  return false;
+};
 
 module.exports = {
   takeOrder,
   refundOrder,
   listItems,
-  // searchOrder
+  searchOrder
 }
