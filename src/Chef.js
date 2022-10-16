@@ -2,6 +2,7 @@ class Chef {
   constructor(name, restaurant) {
     this.name = name;
     this.restaurant = restaurant;
+    this.menus = [];
   };
 
   greetCustomer(customer, morning) {
@@ -10,6 +11,10 @@ class Chef {
     } else {
       return `Hello, ${customer}!`
     };
+  };
+
+  checkForFood(foodItem) {
+    return `Yes, we're serving ${foodItem} today!`
   };
 };
 
