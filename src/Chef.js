@@ -4,8 +4,12 @@ class Chef {
     this.restaurant = restaurant;
   };
 
-  greetCustomer(customer) {
-    return `Hello, ${customer}!`
+  greetCustomer(customer, morning) {
+    if (morning === true) {
+      return `Good morning, ${customer}!`
+    } else {
+      return `Hello, ${customer}!`
+    };
   };
 };
 
