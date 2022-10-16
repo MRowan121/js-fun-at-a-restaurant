@@ -14,9 +14,19 @@ function addMenuItem(restaurant, pizza) {
   };
 };
 
+function removeMenuItem(restaurant, pizza, menuType) {
+  for (var i = 0; i < restaurant.menus[menuType].length; i++) {
+    if (pizza === restaurant.menus[menuType][i].name) {
+      restaurant.menus[menuType].splice([i],1)
+      return `No one is eating our ${pizza} - it has been removed from the ${menuType} menu!`
+    };
+  };
+  return `Sorry, we don't sell ${pizza}, try adding a new recipe!`
+};
+
 
 module.exports = {
   createRestaurant, 
   addMenuItem,
-  // removeMenuItem
+  removeMenuItem
 }
